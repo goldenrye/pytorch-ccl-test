@@ -1,5 +1,6 @@
-# torchrun --nproc_per_node=4 allgather_test.py
-# 2 nodes: torchrun --nnodes=2 --nproc_per_node=1 --rdzv_id=job_1234 --rdzv_backend=c10d --rdzv_endpoint=fdbd:dc61:20:11::16:12345 ./allgather_test.py
+# this script is for gpu tensor all_gather_object test using nccl backend
+# torchrun --nproc_per_node=4 allgather_object.py
+# 2 nodes: torchrun --nnodes=2 --nproc_per_node=1 --rdzv_id=job_1234 --rdzv_backend=c10d --rdzv_endpoint=fdbd:dc61:20:11::16:12345 ./allgather_object.py
 
 import torch
 import torch.distributed as dist
